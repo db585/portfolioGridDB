@@ -17,7 +17,7 @@ gulp.task('sass', function () {
 // More often though, we'll want to watch more than one type of file at once. To do so, we can group together multiple watch processes into a watch task:
 
 gulp.task('watch', function () {
-  gulp.watch('./scss/**/*.scss', ['sass']);
+  gulp.watch('./scss/**/*.scss', gulp.parallel('sass'));
   // Other watchers 
 });
 
